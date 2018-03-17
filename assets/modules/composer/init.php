@@ -14,6 +14,10 @@ if(!$modx->hasPermission('exec_module')){
 
 set_time_limit(0);
 
+if (!getenv('COMPOSER_HOME')) {
+    putenv("COMPOSER_HOME=".MODX_BASE_PATH."composer/");
+}
+
 include_once(dirname(__FILE__)."/SplClassLoader.class.php");
 $classLoader = new SplClassLoader('Modxcomposer', dirname(__FILE__));
 $classLoader->register();
