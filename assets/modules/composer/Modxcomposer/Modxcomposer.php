@@ -134,7 +134,7 @@ class Modxcomposer{
                 $out = $key[0].":".$string[$key[0]];
             }
         }else{
-            if(preg_match('#^((\w+)/(\w+)$)|((\w+)/(\w+)\:(?:\s*)([a-zA-Z0-9\.\*\@\-]+)$)#', $string, $match)){
+            if(preg_match('#^(([\-\w]+)/([\-\w]+)$)|(([\-\w]+)/([\-\w]+)\:(?:\s*)([a-zA-Z0-9\.\*\@\-]+)$)#', $string, $match)){
                 $out = $string;
             }
         }
