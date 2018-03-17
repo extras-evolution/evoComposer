@@ -30,7 +30,7 @@ class Download{
 </FilesMatch>', FILE_APPEND);
                     }
                 }else{
-                    echo "<h1>Bad install</h1><pre>{$data}</pre>";
+                    echo "<h1>Install report</h1><pre>{$data}</pre> <br><a class='btn btn-success' href='".$url."'>Обновить</a>";
                 }
             });
 
