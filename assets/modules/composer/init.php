@@ -14,6 +14,10 @@ if(!$modx->hasPermission('exec_module')){
 
 set_time_limit(0);
 
+if (ini_get('memory_limit') < 256) {
+    die('min 256M memory needed for correct work;');
+}
+
 if (!getenv('COMPOSER_HOME')) {
     putenv("COMPOSER_HOME=".MODX_BASE_PATH."composer/");
 }
